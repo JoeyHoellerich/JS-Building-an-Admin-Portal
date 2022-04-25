@@ -16,6 +16,11 @@ async function adminStart(){
     // add empty list to body
     document.body.append(bookList);
 
+    // for each book in the bookArray, run the showbooks function
+    bookArray.forEach((book) => {
+        showBooks(book);
+    })
+
     // define function that displays books to admin. Book is an object from API
     function showBooks(book){
         // grab the list of books
